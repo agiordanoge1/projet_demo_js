@@ -1,0 +1,11 @@
+Model Information:
+* title:	Teabag
+* source:	https://sketchfab.com/3d-models/teabag-79851214ff1341cbb56115b3e33790f4
+* author:	der.detail.spezialist (https://sketchfab.com/der.detail.spezialist)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Teabag" (https://sketchfab.com/3d-models/teabag-79851214ff1341cbb56115b3e33790f4) by der.detail.spezialist (https://sketchfab.com/der.detail.spezialist) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
