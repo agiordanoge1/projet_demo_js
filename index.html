@@ -1,16 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>My first three.js app</title>
-		<style>
-			body { margin: 0; }
-		</style>
-	</head>
-	<body>
-		<script type="module" src="/main.js"></script>
-		<script>
-			
-		</script>
-	</body>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" type= "image/png" href= "/assets/textures/logo_2.png">
+	<title>Mission Zero Carbone</title>
+	<style>
+		body {
+			margin: 0;
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #f0f0f0;
+		}
+
+		#bandeau {
+			display: none;
+			align-items: center;
+			/* Alignement vertical */
+			justify-content: center;
+			/* Alignement horizontal */
+
+			position: fixed;
+			bottom: 0;
+			width: 50%;
+			/* Largeur du bandeau */
+			left: 50%;
+			transform: translateX(-50%);
+			/* Centrer le bandeau horizontalement */
+			background-color: #ff8c00;
+			color: white;
+			text-align: center;
+			padding: 10px 0;
+			font-family: Arial, sans-serif;
+			text-transform: uppercase;
+			font-weight: bold;
+			/* Mettre le texte en gras */
+		}
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			/* Affiche les éléments en colonne */
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			text-align: center;
+			/* Centre le contenu à l'intérieur de la div */
+		}
+
+
+		h1 {
+			font-size: 2.5em;
+			color: #333;
+			/* Couleur du titre */
+			margin-bottom: 80px;
+			font-family: Arial, sans-serif;
+			/* Exemple de police */
+			text-transform: uppercase;
+			/* Lettres majuscules */
+			letter-spacing: 2px;
+			/* Espacement des lettres */
+		}
+
+		button {
+			padding: 10px 20px;
+			font-size: 20px;
+			color: white;
+			background-color: #ff8c00;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+
+		button:hover {
+			background-color: #e67600;
+		}
+
+		#loading {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			/* Fond noir semi-transparent */
+			justify-content: center;
+			align-items: center;
+			z-index: 1000;
+			color: white;
+			/* Texte en blanc */
+			font-size: 1.5em;
+			font-family: Arial, sans-serif;
+		}
+
+		/* Animation de chargement */
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		.loading-spinner {
+			border: 5px solid #f3f3f3;
+			/* Couleur de la bordure légère */
+			border-top: 5px solid #ff8c00;
+			/* Couleur de la bordure supérieure bleue */
+			border-radius: 50%;
+			width: 50px;
+			height: 50px;
+			animation: spin 2s linear infinite;
+			/* Appliquer l'animation */
+		}
+	</style>
+</head>
+
+<body>
+	<div class="content">
+		<h1 id="titre">Mission Zero Carbone</h1>
+		<button id="jouerButton">Jouer</button>
+	</div>
+
+	<div id="loading">
+		<div class="loading-spinner"></div>
+		<p>Chargement en cours...</p>
+	</div>
+	<input type="file" id="csvFileInput" accept=".csv" style="display: none;" />
+	<div id="bandeau">
+	</div>
+
+
+	<script type='module'>
+		document.getElementById('jouerButton').addEventListener('click', function () {
+			var script = document.createElement('script');
+			script.type = 'module';
+			script.src = 'js/main.js';
+			document.head.appendChild(script);
+
+			var titre = document.getElementById('titre');
+			var loading = document.getElementById('loading');
+
+			if (titre) {
+				titre.style.display = 'none';
+			}
+
+			this.style.display = 'none'; // Masquer le bouton après le clic
+			document.getElementById('loading').style.display = 'flex'; // Afficher l'écran de chargement
+		});
+	</script>
+</body>
+
 </html>
