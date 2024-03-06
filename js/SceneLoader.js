@@ -1,6 +1,6 @@
 // SceneLoader.js
 import * as THREE from '/node_modules/three/build/three.module.js';
-import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+import { GLTFLoader } from '/node_modules/three/examples/jsm/loaders/GLTFLoader';
 import { FBXLoader } from '/node_modules/three/examples/jsm/loaders/FBXLoader.js';
 
 export class SceneLoader {
