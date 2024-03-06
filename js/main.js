@@ -2,7 +2,7 @@
 import { SceneManager } from './SceneManager.js';
 import { SceneLoader } from './SceneLoader.js';
 import { CameraController } from './CameraController.js';
-import * as THREE from '/projet_demo_js/node_modules/three/build/three.module.js';
+import * as THREE from 'projet_demo_js/node_modules/three/build/three.module.js';
 
 
 const renderer = new THREE.WebGLRenderer();
